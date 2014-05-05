@@ -1,10 +1,14 @@
 'use strict';
 
-angular.module('bowlingAppApp')
+angular.module('bowlingjsApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.rolls = [];
+    $scope.addRoll = function(pins) {
+        $scope.rolls.push(pins);
+      };
+
+    $scope.resetRolls = function() {
+        $scope.rolls = [];
+      };
+
   });
